@@ -1,6 +1,6 @@
 {
-  "name": "chrome-extension-webpack",
-  "description": "My basic Chrome extension",
+  "name": "PH-AUTOLOGIN",
+  "description": "Automaticky doplní možnosti podle přednastavených hodnot.",
   "version": "0.1.0",
   "manifest_version": 3,
   "background": {
@@ -8,8 +8,14 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.panhradu.cz/main*"],
-      "js": ["contentScript.js"],
+      "matches": ["https://www.panhradu.cz/reg_new_player.aspx?*"],
+      "js": ["autofill.js"],
+      "css": ["styles/options.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.panhradu.cz/servers.aspx"],
+      "js": ["options.js"],
       "css": ["styles/options.css"]
     }
   ],
@@ -19,20 +25,14 @@
     "open_in_tab": true
   },
   "action": {
-    "default_title": "My basic Chrome extension",
+    "default_title": "PH-AUTOLOGIN",
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "/icons/16x.png",
-      "32": "/icons/32x.png",
-      "48": "/icons/48x.png",
-      "128": "/icons/128x.png"
+      "32": "/icons/32x.png"
     }
   },
   "icons": {
-    "16": "/icons/16x.png",
-    "32": "/icons/32x.png",
-    "48": "/icons/48x.png",
-    "128": "/icons/128x.png"
+    "32": "/icons/32x.png"
   },
   "web_accessible_resources": [
     {

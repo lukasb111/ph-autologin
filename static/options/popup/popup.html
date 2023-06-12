@@ -1,17 +1,82 @@
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all vkCssDialog1">
-    <div class="row center ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
-        <div>Nastavení PH-Tools</div>
+<div class="optionsWrap">
+    <div class="popupHeader">
+        <div class="headerText" >Nastavení</div>
         <div id="closePopup" class="ui-dialog-titlebar-close ui-corner-all clickable">
-            <span class="ui-icon ui-icon-closethick">close</span>
+            <span id="closeButton" class="closeButton"></span>
         </div>
     </div>
-
-
+    
     <div class="items mt10">
-
-        <div class="item center">
-            <button  content-option="hero"  class="butt">Hrdina</button>
+        <div class="mt10">
+            <label>ID hráče</label>
+            <input class="autologinSettingsText" id="id_existing_player" type="text">
         </div>
 
+        <div class="mt10">
+            <label>ID hrdiny</label>
+            <input class="autologinSettingsText" id="id_existing_hero" type="text">
+        </div>
+
+
+        <div class="mt10">
+            <label>Rasa</label>
+            <select class="autologinSettings" id="id_race">
+                <option value="1">Lidé</option>
+                <option value="5">Černé bratrstvo</option>
+            </select>
+        </div>
+
+        <div class="mt10">
+            <label>Oblast</label>
+            <select class="autologinSettings" id="id_area">
+                <option value="1">Sever</option>
+                <option value="2">Východ</option>
+                <option value="3">Jih</option>
+                <option value="4">Západ</option>
+            </select>
+        </div>
+
+        <div class="mt10">
+            <label>Typ startovního hradu</label>
+
+            <select class="autologinSettings" id="id_castle_profile">
+                <option id="id_castle_profile_1" value="1">Ocelová koule + Dostřel</option>
+                <option id="id_castle_profile_2" value="2">Střelec hodnost +2</option>
+                <option id="id_castle_profile_3" value="3">Zbrojnoš a šermíř +3</option>
+                <option id="id_castle_profile_4" value="4">Tržiště +30K a Opravář II.</option>
+                <option id="id_castle_profile_5" value="5">Nejlevnější nákup</option>
+            </select>
+
+        </div>
+
+        <div class="mt10">
+            <label>Technologie</label>
+
+            <select class="autologinSettings" id="id_technology">
+                <option value="1">Ocelová koule + Dostřel</option>
+                <option value="2">Střelec hodnost +2</option>
+                <option value="3">Zbrojnoš a šermíř +3</option>
+                <option value="4">Tržiště +30K a Opravář II.</option>
+                <option value="5">Nejlevnější nákup</option>
+            </select>
+
+        </div>
+
+
+
+        <div class="mt10">
+            <label>Jednotka</label>
+
+            <select class="autologinSettings" id="id_unit">
+                <option value="1">Čarodějnice a prasátko</option>
+                <option value="2">Černý šermíř a střelec</option>
+                <option value="3">Černý stavitel a vrrk</option>
+                <option value="4">Černý léčitel a kňour</option>
+            </select>
+
+        </div>
     </div>
+
+    <div class="copyright">Created by Blahut Software® 2023</div>
+    
 </div>

@@ -2,76 +2,33 @@
   display: flex!important;
 }
 
-.row{
-  display: flex;
-  flex-direction: row;
-}
-
-.center{
-  align-items: center;
-  justify-content: center;
-}
-
-.textCenter{
-  text-align: center;
-}
-
-.mt10{
-  margin-top: 10px;
-}
-
-.mb10{
-  margin-bottom: 10px;
-}
-
-.ms15{
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.disabled{
-  cursor: no-drop!important;
-}
-
-.clickable{
-  cursor: pointer;
-}
-
-.popup{
-  display: none;
+.fillButton{
   position: fixed;
-  left: 20%;
-  width: auto;
-  top: 20vh;
-  height: 30vh;
-  z-index: 101;
+  top: 475px;
+  left: calc(50%);
+  z-index: 1999;
+  height: 32px;
 }
 
-
-.heroLeft{
-  padding: 50px 0 0 10px;
-  width: 300px;
-}
-
-.heroRight{
+.col{
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+  flex-direction: column;
+  width: 100%;
 }
 
-.heroButton{
+.button{
   background-color: #603010;
-  color: #EFEC9F;
-  border-radius: 6px;
   border-left: solid 3px rgb(70,30,5);
   border-right: solid 2px rgb(0,0,0);
   border-top: solid 1px black;
   border-bottom: solid 3px rgb(0,0,0);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  color: #EFEC9F;
 }
 
-.heroButton:hover{
-  cursor: pointer;
-  filter: brightness(130%);
+.mt10{
+  margin-top: 10px;
 }
