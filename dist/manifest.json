@@ -1,0 +1,50 @@
+{
+  "name": "PH-AUTOLOGIN",
+  "description": "Automaticky doplní možnosti podle přednastavených hodnot.",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.panhradu.cz/reg_new_player.aspx?*"],
+      "js": ["autofill.js"],
+      "css": ["styles/options.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.panhradu.cz/servers.aspx"],
+      "js": ["options.js"],
+      "css": ["styles/options.css"]
+    }
+  ],
+  "permissions": ["storage", "scripting"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "PH-AUTOLOGIN",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "/icons/32x.png"
+    }
+  },
+  "icons": {
+    "32": "/icons/32x.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "options/*",
+        "icons/*",
+        "options.js",
+        "popup.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ]
+}
